@@ -18,11 +18,12 @@ import org.testng.ITestResult;
 import org.testng.internal.ConstructorOrMethod;
 import org.testng.xml.XmlTest;
 
+import com.ReportGeneration.GenerateReports;
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 
-public class TestNGListeners implements ITestListener,IInvokedMethodListener{
+public class TestNGListeners extends GenerateReports implements ITestListener,IInvokedMethodListener {
 	
 	public static Fillo fillo;
 	
@@ -35,6 +36,8 @@ public class TestNGListeners implements ITestListener,IInvokedMethodListener{
 public void onTestStart(ITestResult result) {
 	
 	crntclass=result.getInstanceName().substring(result.getInstanceName().lastIndexOf(".")+1).trim();
+	
+	GenerateReports.intializeReports();
 	
 }
 
@@ -107,7 +110,7 @@ public void onFinish(ITestContext context) {
 @Override
 public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
 	// TODO Auto-generated method stub
-	
+	GenerateReports.startTest();
 }
 
 
@@ -117,7 +120,7 @@ public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
 @Override
 public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
 	// TODO Auto-generated method stub
-	
+	GenerateReports.closeTest();
 }
 
 

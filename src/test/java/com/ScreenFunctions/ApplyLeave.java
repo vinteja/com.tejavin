@@ -46,9 +46,10 @@ public class ApplyLeave extends GenericFunctions {
 			
 			boolean status=true;
 			//Select Leave Type
+			String leavetype=getdata("ApplyLeave","Leave_Type", 1);
 			try {
 				
-				String leavetype=getdata("ApplyLeave","Leave_Type", 1);
+				
 				
 				waitForElement(driver.findElement(By.xpath("//option[text()='"+leavetype.trim()+"']")));
 				
@@ -56,11 +57,13 @@ public class ApplyLeave extends GenericFunctions {
 			
 				System.out.println("Leave type "+leavetype+ " is selected Sucessfully");
 				
+				logEvent("pass", "Leave type "+leavetype+ " is selected Sucessfully");
+				
 			}
 			catch(Exception e)
 			{
 				status=false;
-				
+				logEvent("fail", "Leave type "+leavetype+ " is not selected Sucessfully");
 			}
 			
 			//Based on the Leave type status
@@ -80,11 +83,12 @@ public class ApplyLeave extends GenericFunctions {
 					Text_Fromdate.sendKeys(fromdate);
 					
 					System.out.println("From date is enter sucessfully");
+					logEvent("pass", "From date is enter sucessfully");
 				}
 				catch(Exception e)
 				{
 					status=false;
-					
+					logEvent("fail", "From date is not enter sucessfully");
 				}
 				
 				
@@ -97,11 +101,13 @@ public class ApplyLeave extends GenericFunctions {
 					Text_Todate.sendKeys(todate);
 					Text_Todate.sendKeys(Keys.TAB);
 					System.out.println("To date is enter sucessfully");
+					
+					logEvent("pass", "To date is enter sucessfully");
 				}
 				catch(Exception e)
 				{
 					status=false;
-					
+					logEvent("pass", "To date is not enter sucessfully");
 				}
 				
 				
@@ -112,11 +118,12 @@ public class ApplyLeave extends GenericFunctions {
 					
 					Text_Comment.sendKeys(comment);
 					System.out.println("Comment is enter sucessfully");
+					logEvent("pass", "Comment  is enter sucessfully");
 				}
 				catch(Exception e)
 				{
 					status=false;
-					
+					logEvent("fail", "Comment  is not  enter sucessfully");
 				}
 				
 				try {
@@ -129,11 +136,12 @@ public class ApplyLeave extends GenericFunctions {
 					
 					//forceClick(Button_Apply);
 					System.out.println("Apply button is clicked sucessfully");
+					logEvent("pass", "Apply button is clicked sucessfully" );
 				}
 				catch(Exception e)
 				{
 					status=false;
-					
+					logEvent("fail", "Apply button is not clicked sucessfully" );
 				}
 				
 				

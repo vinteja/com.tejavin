@@ -26,6 +26,13 @@
   <version>1.17</version>
 </dependency>
 
+<!-- pom.xml Version 2.x -->
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
+</dependency>
+
 
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
