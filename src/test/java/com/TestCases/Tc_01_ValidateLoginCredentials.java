@@ -20,6 +20,7 @@ public class Tc_01_ValidateLoginCredentials extends GenericFunctions {
 		GenericFunctions gnf=new GenericFunctions();
 		
 		gnf.launchApplication("firefox");
+		//gnf.launchApplication("chrome");
 		
 		//Step2:Enter User Credentials
 		

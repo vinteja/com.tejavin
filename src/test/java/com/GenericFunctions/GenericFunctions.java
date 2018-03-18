@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -60,7 +61,7 @@ public class GenericFunctions extends TestNGListeners {
 			
 			String url=getCommontestdata("Url");
 			
-		//	System.out.println(url);
+			System.out.println(url);
 			
 			driver.get(url);
 			
@@ -72,7 +73,13 @@ public class GenericFunctions extends TestNGListeners {
 			break;
 			
 		case "chrome":
+			System. setProperty("webdriver.chrome.driver", "C:\\Users\\tm\\Downloads\\chromedriver.exe");		
 			
+			driver =new ChromeDriver();
+			String url1=getCommontestdata("Url");
+			System.out.println(url1);
+			driver.manage().window().maximize();
+
 			break;
 			
 			
