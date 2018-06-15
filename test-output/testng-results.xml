@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="21482" started-at="2018-03-18T15:37:58Z" finished-at="2018-03-18T15:38:20Z">
+  <suite name="Suite" duration-ms="31643" started-at="2018-06-15T09:34:40Z" finished-at="2018-06-15T09:35:12Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="21482" started-at="2018-03-18T15:37:58Z" finished-at="2018-03-18T15:38:20Z">
-      <class name="com.TestCases.Tc_01_ValidateLoginCredentials">
-        <test-method status="PASS" signature="Tc_01_ValidateLoginCredentials()[pri:0, instance:com.TestCases.Tc_01_ValidateLoginCredentials@26653222]" name="Tc_01_ValidateLoginCredentials" duration-ms="20193" started-at="2018-03-18T21:07:59Z" finished-at="2018-03-18T21:08:19Z">
+    <test name="Test" duration-ms="31643" started-at="2018-06-15T09:34:40Z" finished-at="2018-06-15T09:35:12Z">
+      <class name="com.TestCases.Tc_02">
+        <test-method status="PASS" signature="verifyCreatAccount()[pri:0, instance:com.TestCases.Tc_02@3ffc5af1]" name="verifyCreatAccount" duration-ms="30229" started-at="2018-06-15T15:04:41Z" finished-at="2018-06-15T15:05:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tc_01_ValidateLoginCredentials -->
-      </class> <!-- com.TestCases.Tc_01_ValidateLoginCredentials -->
+        </test-method> <!-- verifyCreatAccount -->
+      </class> <!-- com.TestCases.Tc_02 -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

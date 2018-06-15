@@ -97,12 +97,6 @@ public class GenerateReports {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
 	public static String createResultFolder()
 	{
 		
