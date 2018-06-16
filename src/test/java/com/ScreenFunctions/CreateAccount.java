@@ -112,25 +112,7 @@ public class CreateAccount extends GenericFunctions
 		}
 		waitForElement(Btn_CreateAccount_CreateAccount);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 		return status;
 }
 	
